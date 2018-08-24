@@ -1,5 +1,5 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y git terminator htop python3-pip arp-scan 
+sudo apt-get install -y git terminator htop python3-pip arp-scan google-chrome-stable cutecom openssh-server
 
