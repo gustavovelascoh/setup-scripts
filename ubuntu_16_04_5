@@ -1,5 +1,49 @@
 #!/bin/bash
 
+if [ ! -d $HOME/apps ]
+then
+  echo "Folder apps not found"
+  echo "Creating directories"
+
+  mkdir -p $HOME/apps/files
+
+else
+  echo "Folder apps already created"
+
+  if [ ! -d $HOME/apps/files ]
+  then
+    echo "Directory apps/files not found"
+    echo "Creating directories"
+    mkdir -p $HOME/apps/files
+  else
+    echo "Folder apps/files already created"
+  fi
+fi
+
+if [ ! -d $HOME/devel ]
+then
+  echo "Folder devel not found"
+  echo "Creating directory"
+
+  mkdir -p $HOME/devel
+
+else
+  echo "Folder devel already created"
+fi
+
+
+IS_CHROME_INSTALLED=$(dpkg --list | grep ii | grep -q "google-chrome"; echo $?)
+echo "CHR "$IS_CHROME_INSTALLED
+if [ $IS_CHROME_INSTALLED -eq 0 ]
+then
+  echo "google-chrome-stable already installed"
+else
+  echo "google-chrome-stable is not installed. Downloading..."
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O $HOME/apps/files/google-chrome-stable_current_amd64.deb
+  sudo apt install $HOME/apps/files/google-chrome-stable_current_amd64.deb
+fi
+exit
+
 sudo apt-get update
-sudo apt-get install -y git terminator htop python3-pip arp-scan google-chrome-stable cutecom openssh-server
+sudo apt-get install -y git terminator htop python3-pip arp-scan cutecom openssh-server
 
