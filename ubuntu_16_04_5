@@ -49,5 +49,5 @@ sudo apt-get install -y git terminator htop python3-pip arp-scan cutecom openssh
 gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 lm-sensors python3-tk
 
 sudo pip3 install --upgrade pip
-sudo pip3 install numpy matplotlib sounddevice
+sudo pip3 install numpy matplotlib sounddevice scipy
 
