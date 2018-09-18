@@ -44,14 +44,18 @@ else
 fi
 exit
 
-sudo apt update
-sudo apt install -y git terminator htop python3-pip arp-scan cutecom openssh-server \\
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install -y git terminator htop python3-pip arp-scan cutecom openssh-server \\
 rar unrar gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 lm-sensors python3-tk python3-dev python-virtualenv
 
+# tex tools
+sudo apt-get install -y texmaker texlive-fonts-extra
+
 # OpenCV dependencies
-sudo apt install cmake build-essential cmake-curses-gui
-sudo apt install libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt install libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get install -y cmake build-essential cmake-curses-gui
+sudo apt-get install -y libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install -y libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 
 sudo pip3 install --upgrade pip
 sudo pip3 install numpy matplotlib sounddevice scipy sklearn
