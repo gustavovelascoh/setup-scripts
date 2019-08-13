@@ -48,7 +48,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y zsh git terminator htop python3-pip arp-scan cutecom openssh-server \\
 rar unrar gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 lm-sensors python3-tk python3-dev python-virtualenv \\
-gnome-tweak-tool net-tools
+gnome-tweak-tool net-tools fonts-powerline
 
 # tex tools
 sudo apt-get install -y texmaker texlive-fonts-extra
